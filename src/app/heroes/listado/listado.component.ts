@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-listado',
@@ -7,6 +7,11 @@ import { Component } from '@angular/core';
 })
 export class ListadoComponent {
 
- heroes: string[] = ['hulk', 'Saitaman', 'thor', 'goku'];
- 
+  heroes: string[] = ['hulk', 'Saitama', 'Superman', 'thor', 'goku'];
+  heroeBorrado = '';
+
+  borrarHeroe(): void {
+      this.heroeBorrado = this.heroes.shift() || '' ;
+  }
+
 }
